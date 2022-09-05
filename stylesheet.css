@@ -15,8 +15,11 @@ font-family: 'Montserrat', sans-serif;
 }
 body{
     background-color: hsl(30, 38%, 92%);
-    font-family: 'Montserrat', sans-serif;;
-
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    position: relative;
+  
+    padding: 5%;
 }
 
 .container{
@@ -30,12 +33,17 @@ body{
     flex-direction: column;
     background-color: white;
     border-radius: 10px;
+
     
 }
 
 .img-mobile{
     max-width: 100%;
     border-radius: 10px 10px 0 0;
+}
+
+.img-desktop{
+    display: none;
 }
 
 .card-content-container{
@@ -107,12 +115,64 @@ button:hover{
     background-color: rgb(26,64,49);
 }
 
-.attribution{
+footer{
     font-size: 10px;
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    
 }
 
 a{
     color: black;
+}
+
+@media screen and (min-width: 1440px){
+    .card-component{
+        flex-direction: row;
+
+    }
+
+    .img-mobile{
+        display: none;
+    }
+
+    .img-desktop{
+        display: flex;
+        max-width: 50%;
+        border-radius: 10px 0 0 10px;
+        
+    }
+
+    .container{
+        margin: 25%;
+    }
+
+    .product-name{
+        margin-top: 5%;
+        font-size: 2.5em;
+    }
+
+    .price-container{
+        margin-top: 10%;
+    }
+
+    .product-description{
+        margin-top: 10%;
+    }
+
+    .btn-container{
+        margin-top: 5%;
+    }
+
+    .price-container{
+        margin-top: 10%;
+    }
+    
+    .btn{
+        padding: 7%;
+    }
 }
